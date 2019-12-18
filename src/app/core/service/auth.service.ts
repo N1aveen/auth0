@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { lock } from '../models/jsonModel';
+import { lock , clientID} from '../models/jsonModel';
 @Injectable()
 export class AuthService {
     storage = sessionStorage;
@@ -19,10 +19,10 @@ export class AuthService {
 
   logout() {
     this.storage.removeItem('token');
-    // lock.logout({
-    //     returnTo: 'http://localhost:4200',
-    //     clientID
-    //   });
+    lock.logout({
+        returnTo: 'http://localhost:4200',
+        clientID
+      });
     this.router.navigate(['']);
   }
 
