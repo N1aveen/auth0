@@ -23,7 +23,6 @@ export class AuthService {
         returnTo: 'http://localhost:4200',
         clientID
       });
-    this.router.navigate(['']);
   }
 
   isAuthenticated() {
