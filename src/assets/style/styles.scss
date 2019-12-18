@@ -1,0 +1,87 @@
+@import './material.config';
+@import './material';
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+#header, #footer {
+    height: 36px;
+    background-color: #424242;
+    color:#ffffff;
+}
+
+#page {
+    height: calc(100% - 72px);
+    padding: 20px 16px;
+    overflow-x: hidden;
+    width: 75%;
+    margin: 0 auto;
+}
+#aside {
+    position: absolute;
+    width: 320px;
+    background-color: #ddd;
+    top: 0;
+    right: -320px;
+    height: calc(100% - 72px);
+    transition: all 0.3s ease-in-out;
+    margin-top: 60px;
+}
+
+#aside.active {
+    right: 0;
+}
+
+.btn {
+    width: 130px;
+    height: 34px;
+    margin-right: 9px;
+    border: none;
+    color: #ffffff;
+}
+
+.heading-title{    
+    width: 75%;
+    margin: 0 auto;
+    font-size: 27px;
+}
+
+@mixin backgroud-color($color) {
+    background-color: $color;
+}
+
+.primary-button{
+    @include backgroud-color(#424242);
+}
+.secondary-btn{
+    @include backgroud-color(#00b259);
+}
+.primary-button:hover:hover{
+    @include backgroud-color(#0c4789);
+    box-shadow: 2px 2px 2px 2px #74adf0;
+}
+
+.example-card {
+    max-width: 100px;
+  }
+  .example-card:hover {
+      box-shadow: 4px 4px 4px 4px #ccc;
+  }
+  .example-header-image {
+    background-size: cover;
+  }
+.title{
+ color: #00b259;
+}
+.second{
+    color: #fcc200;
+}
+a{
+    text-decoration: none;    margin-right: 50%;
+}
+.al-rt{
+font-size: 15px;
+}
+.auth0-lock.auth0-lock .auth0-lock-badge-bottom {
+    display: none;
+}
