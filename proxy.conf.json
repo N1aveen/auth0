@@ -1,0 +1,7 @@
+{
+    "/bankAccount": {
+      "target": "http://starlord.hackerearth.com",
+      "secure": false,
+      "changeOrigin":true
+    }
+  }

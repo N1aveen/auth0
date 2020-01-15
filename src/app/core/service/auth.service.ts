@@ -6,6 +6,9 @@ export class AuthService {
     storage = sessionStorage;
   constructor(private router: Router) {
     lock.on('authenticated', (authResult: any) => {
+        // lock.getUserInfo(authResult.accessToken, (error, profileData) => {
+        //    console.log(profileData);
+        //   });
         this.storage.setItem('token', authResult.tokenType + ' ' + authResult.idToken);
         this.router.navigate(['/cartManagement/dashboard']);
     });

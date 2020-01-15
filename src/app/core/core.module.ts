@@ -4,16 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreRouterModules } from './router';
 import { MaterialModule } from '../material.module';
-// components
-import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
-
-// services
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+// components
+import { CoreComponent } from './core.component';
 import { HeaderComponent } from './shared/header.component';
 import { FooterComponent } from './shared/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+
+// services
 import { AuthGuard } from './guards/auth.guard';
-import { CoreComponent } from './core.component';
 import { AuthService } from './service/auth.service';
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AuthService } from './service/auth.service';
         BrowserAnimationsModule,
         CoreRouterModules,
         MaterialModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
     declarations: [
         CoreComponent,
